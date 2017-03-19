@@ -23,6 +23,13 @@
  
              ConfigurationValue {
                  id: shortcutsEnabled
+@@ -98,6 +99,7 @@
+         }
+ 
+         IconButton {
++	    visible: false
+             anchors.right: parent.right
+             icon.source: "image://theme/icon-s-setting"
  
 --- /usr/share/lipstick-jolla-home-qt5/main/Desktop.qml	2017-03-09 02:18:02.697963356 +0100
 +++ /usr/share/lipstick-jolla-home-qt5/main/Desktop.qml	2017-03-09 02:18:25.081678202 +0100

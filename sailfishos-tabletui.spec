@@ -1,6 +1,6 @@
 Name:          sailfishos-tabletui
-Version:       0.1
-Release:       4
+Version:       0.2
+Release:       1
 Summary:       Tablet UI
 Group:         System/Tools
 Vendor:        fravaccaro
@@ -40,5 +40,8 @@ fi
 fi
 
 %changelog
+* Sun Mar 19 2017 0.2
+- Settings icon hidden (thanks to Ancelad).
+
 * Sun Mar 19 2017 0.1
 - First build.
