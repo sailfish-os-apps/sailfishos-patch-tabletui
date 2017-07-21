@@ -1,0 +1,58 @@
+--- /usr/share/lipstick-jolla-home-qt5/eventsview/EventsViewSidebar.qml	2017-03-16 14:11:25.226141238 +0100
++++ /usr/share/lipstick-jolla-home-qt5/eventsview/EventsViewSidebar.qml	2017-03-16 14:13:17.789955645 +0100
+@@ -59,18 +59,19 @@
+             top: parent.top
+             topMargin: 2*Theme.paddingLarge
+             left: mainSeparator.right
+-            leftMargin: Theme.paddingLarge
++            leftMargin: Theme.paddingSmall
+             right: parent.right
+-            rightMargin: Theme.paddingLarge
++            rightMargin: Theme.paddingSmall
+         }
+ 
+         FavoriteSettingsLoader {
+             id: favoriteSettingsLoader
+ 
+             width: parent.width
+-            height: item.height + 3*Theme.paddingLarge
++            height: item.height + Theme.paddingLarge
+             active: shortcutsEnabled.value
+             pager: eventViewList
++            showListFavorites: true
+ 
+             ConfigurationValue {
+                 id: shortcutsEnabled
+@@ -98,6 +99,7 @@
+         }
+ 
+         IconButton {
++	    visible: false
+             anchors.right: parent.right
+             icon.source: "image://theme/icon-s-setting"
+ 
+--- /usr/share/lipstick-jolla-home-qt5/main/Desktop.qml	2017-03-09 02:18:02.697963356 +0100
++++ /usr/share/lipstick-jolla-home-qt5/main/Desktop.qml	2017-03-09 02:18:25.081678202 +0100
+@@ -16,7 +16,7 @@
+     property bool eventsViewVisible
+     property bool eventsSubviewVisible
+     property bool eventsViewNeedsConnectivity
+-    property bool showEventsViewSidebar: Screen.sizeCategory >= Screen.Large
++    property bool showEventsViewSidebar: Screen.sizeCategory >= Screen.Small
+     property real eventsViewSidebarWidth
+     property real eventsColumnMaxWidth: showEventsViewSidebar ? Math.max(Screen.width, Screen.height) / 3 * 2
+                                                               : Math.min(Screen.width, Screen.height)
+
+--- /usr/lib/qt5/qml/Sailfish/Silica/Slider.qml	2017-03-18 16:43:40.059274969 +0100
++++ /usr/lib/qt5/qml/Sailfish/Silica/Slider.qml	2017-03-18 16:43:17.825583726 +0100
+@@ -49,8 +49,8 @@
+     property alias label: labelText.text
+     property bool down: pressed && !DragFilter.canceled && !_cancel
+     property bool highlighted: down
+-    property real leftMargin: Math.round(Screen.width/8)
+-    property real rightMargin: Math.round(Screen.width/8)
++    property real leftMargin: Math.round(parent.width/8)
++    property real rightMargin: Math.round(parent.width/8)
+ 
+     property bool _hasValueLabel: false
+     property Item _valueLabel

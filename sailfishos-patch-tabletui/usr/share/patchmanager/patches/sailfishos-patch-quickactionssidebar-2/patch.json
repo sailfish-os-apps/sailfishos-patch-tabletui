@@ -1,0 +1,8 @@
+{
+    "name": "2 columns in quick actions sidebar",
+    "description": "Show 2 columns of toggles in the quick actions sidebar (suitable for smaller screens).",
+    "category": "homescreen",
+    "infos": {
+        "maintainer": "fravaccaro"
+    }
+}

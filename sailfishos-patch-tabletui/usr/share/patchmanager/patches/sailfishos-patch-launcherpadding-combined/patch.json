@@ -1,0 +1,8 @@
+{
+    "name": "Large padding in Launcher (for Launcher combined patches)",
+    "description": "Increase the Launcher padding. Use it if you have Launcher combined patches enabled.",
+    "category": "homescreen",
+    "infos": {
+        "maintainer": "fravaccaro"
+    }
+}

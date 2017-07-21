@@ -1,0 +1,11 @@
+--- /usr/share/lipstick-jolla-home-qt5/eventsview/FavoriteSettingsLoader.qml	2017-03-16 14:22:42.916115747 +0100
++++ /usr/share/lipstick-jolla-home-qt5/eventsview/FavoriteSettingsLoader.qml	2017-03-16 14:23:27.930187990 +0100
+@@ -16,7 +16,7 @@
+     id: root
+ 
+     property real firstColumnVCenterOffset: width / columns / 2
+-    property int columns: 3
++    property int columns: isLandscape ? 3 : 2
+     property bool showListFavorites
+     property Item pager
+     property int padding

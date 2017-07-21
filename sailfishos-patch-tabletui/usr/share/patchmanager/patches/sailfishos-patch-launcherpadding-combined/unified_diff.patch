@@ -1,0 +1,27 @@
+--- /usr/share/lipstick-jolla-home-qt5/launcher/LauncherGrid.qml	2017-07-21 15:57:12.535442580 +0200
++++ /usr/share/lipstick-jolla-home-qt5/launcher/LauncherGrid.qml	2017-07-21 16:00:52.251261655 +0200
+@@ -56,12 +56,12 @@
+     }
+ 
+     // The multipliers below for Large screens are magic. They look good on Jolla tablet.
+-    property real minimumCellWidth: Screen.sizeCategory >= Screen.Large ? Theme.itemSizeExtraLarge * 1.6 : Theme.itemSizeExtraLarge
++    property real minimumCellWidth: Screen.sizeCategory >= Screen.Small ? Theme.itemSizeLarge * 1.6 : Theme.itemSizeLarge
+     // phone reference row height: 960 / 6
+-    property real minimumCellHeight: Screen.sizeCategory >= Screen.Large ? Theme.itemSizeExtraLarge * 1.6 : Theme.pixelRatio * 160
++    property real minimumCellHeight: Screen.sizeCategory >= Screen.Small ? Theme.itemSizeLarge * 1.6 : Theme.pixelRatio * 160
+     property int rows: isPortrait ? launcherGridSettings.rows : launcherGridSettings.lrows
+     property int columns: isPortrait ? launcherGridSettings.columns : launcherGridSettings.lcolumns
+-    property int horizontalMargin: Screen.sizeCategory >= Screen.Large ? 6 * Theme.paddingLarge : Theme.paddingLarge
++    property int horizontalMargin: Screen.sizeCategory >= Screen.Small ? 6 * Theme.paddingLarge : Theme.paddingLarge
+     property int initialCellWidth: (launcherPager.width - 2*horizontalMargin) / (columns + (isPortrait ? 0 : 1))
+     property bool launcherEditMode: removeApplicationEnabled
+     property var launcherModel: model
+@@ -70,7 +70,7 @@
+     property Dialog openedChildFolder
+     property alias reorderItem: gridManager.reorderItem
+     property alias gridManager: gridManager
+-    readonly property bool largeScreen: Screen.sizeCategory >= Screen.Large
++    readonly property bool largeScreen: Screen.sizeCategory >= Screen.Small
+     signal itemLaunched
+ 
+     width: cellWidth * columns

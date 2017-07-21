@@ -1,0 +1,8 @@
+{
+    "name": "Quick actions sidebar",
+    "description": "Show tablet-like quick actions sidebar in the Event view.",
+    "category": "homescreen",
+    "infos": {
+        "maintainer": "fravaccaro"
+    }
+}
