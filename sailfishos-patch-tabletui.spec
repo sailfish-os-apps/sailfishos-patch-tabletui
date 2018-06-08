@@ -1,5 +1,5 @@
 Name:          sailfishos-patch-tabletui
-Version:       0.3
+Version:       0.4
 Release:       1
 Summary:       Tablet UI
 Group:         System/Tools
@@ -47,6 +47,9 @@ fi
 fi
 
 %changelog
+* Fri Jun 8 2018 0.4
+- Sailfish OS 2.2.0 compatibility.
+
 * Fri Jul 21 2017 0.3
 - Large padding in Launcher patch.
 

@@ -33,7 +33,7 @@
  
 --- /usr/share/lipstick-jolla-home-qt5/main/Desktop.qml	2017-03-09 02:18:02.697963356 +0100
 +++ /usr/share/lipstick-jolla-home-qt5/main/Desktop.qml	2017-03-09 02:18:25.081678202 +0100
-@@ -16,7 +16,7 @@
+@@ -24,7 +24,7 @@
      property bool eventsViewVisible
      property bool eventsSubviewVisible
      property bool eventsViewNeedsConnectivity
@@ -53,6 +53,5 @@
 -    property real rightMargin: Math.round(Screen.width/8)
 +    property real leftMargin: Math.round(parent.width/8)
 +    property real rightMargin: Math.round(parent.width/8)
- 
-     property bool _hasValueLabel: false
-     property Item _valueLabel
+     property color highlightColor: Theme.highlightColor
+     property color secondaryHighlightColor: Theme.secondaryHighlightColor

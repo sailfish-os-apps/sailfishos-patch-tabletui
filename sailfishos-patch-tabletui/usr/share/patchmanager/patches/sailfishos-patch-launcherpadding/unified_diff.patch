@@ -1,22 +1,22 @@
 --- /usr/share/lipstick-jolla-home-qt5/launcher/LauncherGrid.qml	2017-07-21 15:57:12.535442580 +0200
 +++ /usr/share/lipstick-jolla-home-qt5/launcher/LauncherGrid.qml	2017-07-21 16:00:52.251261655 +0200
-@@ -17,12 +17,12 @@
+@@ -18,12 +18,12 @@
      id: gridview
  
      // The multipliers below for Large screens are magic. They look good on Jolla tablet.
 -    property real minimumCellWidth: Screen.sizeCategory >= Screen.Large ? Theme.itemSizeExtraLarge * 1.6 : Theme.itemSizeExtraLarge
-+    property real minimumCellWidth: Screen.sizeCategory >= Screen.Small ? Theme.itemSizeLarge * 1.6 : Theme.itemSizeLarge
++    property real minimumCellWidth: Screen.sizeCategory >= Screen.Small ? Theme.itemSizeExtraLarge * 1.6 : Theme.itemSizeExtraLarge
      // phone reference row height: 960 / 6
 -    property real minimumCellHeight: Screen.sizeCategory >= Screen.Large ? Theme.itemSizeExtraLarge * 1.6 : Theme.pixelRatio * 160
-+    property real minimumCellHeight: Screen.sizeCategory >= Screen.Small ? Theme.itemSizeLarge * 1.6 : Theme.pixelRatio * 160
++    property real minimumCellHeight: Screen.sizeCategory >= Screen.Small ? Theme.itemSizeExtraLarge * 1.6 : Theme.pixelRatio * 160
      property int rows: Math.floor(launcherPager.height / minimumCellHeight)
      property int columns: Math.floor(launcherPager.width / minimumCellWidth)
--    property int horizontalMargin: Screen.sizeCategory >= Screen.Large ? 6 * Theme.paddingLarge : Theme.paddingLarge
-+    property int horizontalMargin: Screen.sizeCategory >= Screen.Small ? 6 * Theme.paddingLarge : Theme.paddingLarge
+-    property int horizontalMargin: Screen.sizeCategory >= Screen.Large ? 6 * Theme.paddingLarge : Theme._homePageMargin
++    property int horizontalMargin: Screen.sizeCategory >= Screen.Small ? 6 * Theme.paddingLarge : Theme._homePageMargin
      property int initialCellWidth: (launcherPager.width - 2*horizontalMargin) / columns
      property bool launcherEditMode: removeApplicationEnabled
      property var launcherModel: model
-@@ -31,7 +31,7 @@
+@@ -32,7 +32,7 @@
      property Item openedChildFolder
      property alias reorderItem: gridManager.reorderItem
      property alias gridManager: gridManager
