@@ -1,6 +1,6 @@
 --- /usr/share/lipstick-jolla-home-qt5/eventsview/EventsViewSidebar.qml	2017-03-16 14:11:25.226141238 +0100
 +++ /usr/share/lipstick-jolla-home-qt5/eventsview/EventsViewSidebar.qml	2017-03-16 14:13:17.789955645 +0100
-@@ -59,18 +59,19 @@
+@@ -60,9 +60,9 @@
              top: parent.top
              topMargin: 2*Theme.paddingLarge
              left: mainSeparator.right
@@ -11,7 +11,8 @@
 +            rightMargin: Theme.paddingSmall
          }
  
-         FavoriteSettingsLoader {
+         SimSelector {
+@@ -81,9 +81,10 @@
              id: favoriteSettingsLoader
  
              width: parent.width
@@ -23,17 +24,17 @@
  
              ConfigurationValue {
                  id: shortcutsEnabled
-@@ -98,6 +99,7 @@
+@@ -111,6 +112,7 @@
          }
  
          IconButton {
-+	    visible: false
++            visible: false
              anchors.right: parent.right
              icon.source: "image://theme/icon-s-setting"
- 
+  
 --- /usr/share/lipstick-jolla-home-qt5/main/Desktop.qml	2017-03-09 02:18:02.697963356 +0100
 +++ /usr/share/lipstick-jolla-home-qt5/main/Desktop.qml	2017-03-09 02:18:25.081678202 +0100
-@@ -24,7 +24,7 @@
+@@ -25,7 +25,7 @@
      property bool eventsViewVisible
      property bool eventsSubviewVisible
      property bool eventsViewNeedsConnectivity

@@ -1,6 +1,6 @@
 Name:          sailfishos-patch-tabletui
-Version:       0.4
-Release:       1
+Version:       0.5
+Release:       5
 Summary:       Tablet UI
 Group:         System/Tools
 Vendor:        fravaccaro
@@ -47,6 +47,9 @@ fi
 fi
 
 %changelog
+* Wed Sep 5 2018 0.5
+- Sailfish OS 2.2.1 compatibility.
+
 * Fri Jun 8 2018 0.4
 - Sailfish OS 2.2.0 compatibility.
 
