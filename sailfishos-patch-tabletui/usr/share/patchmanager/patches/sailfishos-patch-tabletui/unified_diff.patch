@@ -44,6 +44,31 @@
      property real eventsColumnMaxWidth: showEventsViewSidebar ? Math.max(Screen.width, Screen.height) / 3 * 2
                                                                : Math.min(Screen.width, Screen.height)
 
+--- /usr/share/lipstick-jolla-home-qt5/eventsview/FavoriteSettingsLoader.qml	2017-03-16 14:22:42.916115747 +0100
++++ /usr/share/lipstick-jolla-home-qt5/eventsview/FavoriteSettingsLoader.qml	2017-03-16 14:23:27.930187990 +0100
+@@ -11,12 +11,20 @@
+ import org.nemomobile.dbus 2.0
+ import org.nemomobile.lipstick 0.1
+ import "../main"
++import org.nemomobile.configuration 1.0
+ 
+ Loader {
+     id: root
+ 
++    ConfigurationGroup {
++        id: toggles
++        path: "/desktop/lipstick/sailfishos-patch-tabletui"
++        property real portrait: 3
++        property real landscape: 3
++    }
++
+     property real firstColumnVCenterOffset: width / columns / 2
+-    property int columns: 3
++    property int columns: isLandscape ? toggles.landscape : toggles.portrait
+     property bool showListFavorites
+     property Item pager
+     property int padding
+
 --- /usr/lib/qt5/qml/Sailfish/Silica/Slider.qml	2017-03-18 16:43:40.059274969 +0100
 +++ /usr/lib/qt5/qml/Sailfish/Silica/Slider.qml	2017-03-18 16:43:17.825583726 +0100
 @@ -49,8 +49,8 @@

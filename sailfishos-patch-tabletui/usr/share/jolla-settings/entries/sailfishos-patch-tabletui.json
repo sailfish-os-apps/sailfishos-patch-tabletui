@@ -1,0 +1,15 @@
+{
+    "translation_catalog": "sailfishos-patch-tabletui",
+    "entries": [
+        {
+            "path": "system_settings/look_and_feel/sailfishos-patch-tabletui",
+            "type": "page",
+            "title": "Tablet UI",
+            "icon": "image://theme/icon-m-tablet",
+            "order": 1500,
+            "params": {
+                "source": "/usr/share/jolla-settings/pages/sailfishos-patch-tabletui/main.qml"
+            }
+        }
+    ]
+}

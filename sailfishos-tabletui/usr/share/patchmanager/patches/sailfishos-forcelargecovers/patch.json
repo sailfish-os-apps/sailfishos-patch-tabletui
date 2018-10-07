@@ -1,8 +1,0 @@
-{
-    "name": "Force large covers",
-    "description": "Force large covers in the Home screen.",
-    "category": "homescreen",
-    "infos": {
-        "maintainer": "fravaccaro"
-    }
-}
