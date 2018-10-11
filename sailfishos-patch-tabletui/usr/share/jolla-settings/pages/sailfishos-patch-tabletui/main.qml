@@ -27,7 +27,7 @@ Page {
             }
 
             SectionHeader {
-                text: qsTr("Portrait toggles")
+                text: qsTr("Portrait shortcuts")
             }
 
             Slider {
@@ -47,7 +47,7 @@ Page {
             }
 
             SectionHeader {
-                text: qsTr("Landscape toggles")
+                text: qsTr("Landscape shortcuts")
             }
 
             Slider {
@@ -81,11 +81,32 @@ Page {
                   onClicked: Qt.openUrlExternally("https://www.paypal.me/fravaccaro")
               }
 
-    }
+              SectionHeader { text: qsTr("Translations") }
+
+              AboutLanguage { text: "Italiano" }
+              AboutTranslator { text: "Francesco Vaccaro" }
+              Item { width: parent.width; height: Theme.paddingLarge }
+
+              Label {
+                  x: Theme.paddingLarge
+                  width: parent.width - (x * 2)
+                  wrapMode: Text.Wrap
+                  textFormat: Text.RichText
+                  text: qsTr("Request a new language or contribute to existing languages on the Transifex project page.")
+                  onLinkActivated: Qt.openUrlExternally(link)
+              }
+
+              Button {
+                  anchors.horizontalCenter: parent.horizontalCenter
+                  text: qsTr("Transifex")
+                  onClicked: Qt.openUrlExternally("https://www.transifex.com/fravaccaro/tablet-ui-patch/")
+              }
+
+              Item { width: parent.width; height: Theme.paddingLarge }
+        }
 
         VerticalScrollDecorator {
             flickable: flick
         }
     }
 }
-
