@@ -1,6 +1,6 @@
 Name:          sailfishos-patch-tabletui
 Version:       0.6.1
-Release:       1
+Release:       2
 Summary:       Tablet UI
 Group:         System/Tools
 Vendor:        fravaccaro
@@ -34,7 +34,10 @@ if [ $1 = 0 ]; then
 	rm -rf /usr/share/patchmanager/patches/sailfishos-patch-launcherpadding-combined
 	rm /usr/share/jolla-settings/entries/sailfishos-patch-tabletui.json
 	rm -rf /usr/share/jolla-settings/pages/sailfishos-patch-tabletui
+	rm /usr/share/translations/sailfishos-patch-tabletui-de.qm
 	rm /usr/share/translations/sailfishos-patch-tabletui-it.qm
+	rm /usr/share/translations/sailfishos-patch-tabletui-nl.qm
+	rm /usr/share/translations/sailfishos-patch-tabletui-nl_BE.qm
 else
 if [ $1 = 1 ]; then
     // Do stuff specific to upgrades
